@@ -1,0 +1,7 @@
+
+
+.sidebar-style {
+  @apply w-[240px] bg-white border-r transition-all duration-300;
+}
+
+

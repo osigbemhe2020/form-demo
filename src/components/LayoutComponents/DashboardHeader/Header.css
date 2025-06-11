@@ -1,0 +1,37 @@
+/* styles/navbar.css */
+
+.header-style {
+  @apply flex items-center justify-between h-16 px-6 border-b bg-white;
+}
+
+.header-container {
+  @apply flex items-center justify-between h-16 px-6 border-b bg-white transition-all duration-300;
+}
+
+.sidebar-open {
+  @apply pl-[240px]; /* or whatever width your sidebar is */
+}
+
+.search-input {
+  @apply flex items-center bg-gray-200 rounded-lg px-4 py-2 w-80 text-sm text-gray-600;
+}
+
+.notification-wrapper {
+  @apply relative mr-6;
+}
+
+.notification-dot {
+  @apply absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full;
+}
+
+.user-info {
+  @apply flex items-center gap-2;
+}
+
+.user-name {
+  @apply font-semibold text-sm;
+}
+
+.user-role {
+  @apply text-xs text-gray-500;
+}
