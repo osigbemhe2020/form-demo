@@ -1,11 +1,12 @@
 /* styles/navbar.css */
+@import "tailwindcss";
 
 .header-style {
-  @apply flex items-center justify-between h-16 px-6 border-b bg-white;
+  @apply flex items-center justify-between h-[95px] px-6  bg-white;
 }
 
 .header-container {
-  @apply flex items-center justify-between h-16 px-6 border-b bg-white transition-all duration-300;
+  @apply flex items-center justify-between h-16 px-6  bg-white transition-all duration-300;
 }
 
 .sidebar-open {
@@ -17,11 +18,11 @@
 }
 
 .notification-wrapper {
-  @apply relative mr-6;
+  @apply relative mr-6 rounded-full bg-[#E8E8E8] p-2;
 }
 
 .notification-dot {
-  @apply absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full;
+  @apply absolute top-1 right-2 w-2 h-2 bg-red-500 rounded-full;
 }
 
 .user-info {

@@ -1,10 +1,7 @@
+@import "tailwindcss";
 
 .dashboard-layout {
   @apply flex min-h-screen;
-}
-
-.sidebar-style {
-  @apply w-[240px] bg-white border-r transition-all duration-300;
 }
 
 .main-style {
