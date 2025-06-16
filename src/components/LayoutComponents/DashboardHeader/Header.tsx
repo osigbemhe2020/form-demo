@@ -39,7 +39,7 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({ user, onToggleSidebar
       </div>
 
       {/* Right Controls */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center">
         <div className="notification-wrapper relative">
           <IoMdNotificationsOutline className="text-xl text-gray-700" />
           <span className="notification-dot absolute top-0 right-0 h-2 w-2 bg-red-500 rounded-full border border-white" />
@@ -47,11 +47,11 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({ user, onToggleSidebar
 
         <div className="flex items-center gap-2">
           <Image
-            src="/profile.jpg"
+            src="/Images/profile-image.jpg"
             alt="profile"
             height={32}
             width={32}
-            className="w-8 h-8 rounded-full border border-[#858585]"
+            className="w-8 h-8 object-cover rounded-full border border-[#858585]"
           />
           <div className="hidden sm:block">
             <p className="text-sm font-semibold">{user?.name || 'Chris Davies'}</p>
