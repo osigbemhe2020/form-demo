@@ -9,7 +9,7 @@ interface DashboardLayoutProps {
   children: React.ReactNode;
   user: {
     name: string;
-    role: "artisan" | "client" | "professional";
+    role: "artisan" | "client" | "professional" | "admin";
   };
 }
 
@@ -45,7 +45,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, user }) => 
       {/* Sidebar */}
       <div
         ref={sidebarRef}
-        className={`fixed inset-y-0 left-0 z-30 w-64 transform bg-white transition-transform duration-300 ease-in-out md:translate-x-0 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+        className={`fixed inset-y-0 left-0 z-30 w-58 transform bg-white transition-transform duration-300 ease-in-out md:translate-x-0 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
           } md:static md:inset-0`}
       >
         <Sidebar userRole={user.role} onCloseMobile={() => setSidebarOpen(false)} />
