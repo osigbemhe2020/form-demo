@@ -65,7 +65,7 @@ const Sidebar: React.FC<SidebarProps> = ({ userRole, onCloseMobile }) => {
       {/* Mobile Close Button */}
       {onCloseMobile && (
         <button
-          className="absolute top-4 right-4 md:hidden text-gray-600"
+          className="absolute top-4 right-4 lg:hidden text-gray-600"
           onClick={onCloseMobile}
           aria-label="Close Sidebar"
         >
@@ -92,6 +92,7 @@ const Sidebar: React.FC<SidebarProps> = ({ userRole, onCloseMobile }) => {
               <React.Fragment key={href}>
                 <Link
                   href={href}
+                  onClick={onCloseMobile}
                   className={`link-style flex items-center gap-2 ${
                     isActive
                       ? "text-[#070F65] font-semibold rounded-l-[4px] border-l-[#070F65] border-l-[6px]"
