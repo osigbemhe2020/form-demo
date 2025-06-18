@@ -1,16 +1,8 @@
-/* styles/navbar.css */
+
 @import "tailwindcss";
 
 .header-style {
-  @apply flex items-center justify-between h-[95px] px-6  bg-white;
-}
-
-.header-container {
-  @apply flex items-center justify-between h-16 px-6  bg-white transition-all duration-300;
-}
-
-.sidebar-open {
-  @apply pl-[240px]; /* or whatever width your sidebar is */
+  @apply flex items-center justify-between gap-4 bg-white;
 }
 
 .search-input {
@@ -18,7 +10,7 @@
 }
 
 .notification-wrapper {
-  @apply relative mr-6 rounded-full bg-[#E8E8E8] p-2;
+  @apply relative rounded-full bg-[#E8E8E8] p-2;
 }
 
 .notification-dot {
