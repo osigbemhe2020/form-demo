@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .sidebar-style {
-  @apply w-[253px] bg-white transition-all duration-300 py-[42px] flex flex-col gap-[100px];
+  @apply bg-white transition-all duration-300 py-[42px] flex flex-col gap-[100px];
 }
 
 .link-style {
