@@ -4,7 +4,7 @@ import React from 'react';
 import { FiSearch, FiMenu } from 'react-icons/fi';
 import { IoMdNotificationsOutline } from 'react-icons/io';
 import "@/components/LayoutComponents/DashboardHeader/Header.css";
-import Image from 'next/image';
+
 
 type UserProps = {
   name: string;
@@ -18,10 +18,10 @@ interface DashboardHeaderProps {
 
 const DashboardHeader: React.FC<DashboardHeaderProps> = ({ user, onToggleSidebar }) => {
   return (
-    <header className="header-style flex justify-between items-center px-4 py-3 bg-white relative">
+    <header className="header-style px-3 flex justify-between items-center lg:px-4 py-3 bg-white fixed left-0 top-0 lg:left-58 right-0 z-10">
       {/* Sidebar Toggle (Mobile Only) */}
       <button
-        className="block md:hidden text-2xl text-gray-700"
+        className="block lg:hidden text-3xl text-gray-700"
         onClick={onToggleSidebar}
         aria-label="Toggle Sidebar"
       >
@@ -39,19 +39,17 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({ user, onToggleSidebar
       </div>
 
       {/* Right Controls */}
-      <div className="flex items-center">
+      <div className="flex items-center gap-3">
         <div className="notification-wrapper relative">
           <IoMdNotificationsOutline className="text-xl text-gray-700" />
           <span className="notification-dot absolute top-0 right-0 h-2 w-2 bg-red-500 rounded-full border border-white" />
         </div>
 
         <div className="flex items-center gap-2">
-          <Image
+          <img
             src="/Images/profile-image.jpg"
             alt="profile"
-            height={32}
-            width={32}
-            className="w-8 h-8 object-cover rounded-full border border-[#858585]"
+            className="w-26 h-9 md:w-9 md:h-9 object-cover rounded-full border border-[#858585]"
           />
           <div className="hidden sm:block">
             <p className="text-sm font-semibold">{user?.name || 'Chris Davies'}</p>
