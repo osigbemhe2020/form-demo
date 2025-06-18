@@ -37,7 +37,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, user }) => 
       {/* Backdrop */}
       {isSidebarOpen && (
         <div
-          className="fixed inset-0 z-20 bg-[#00000060] bg-opacity-50 md:hidden"
+          className="fixed inset-0 z-20 bg-[#00000060] bg-opacity-50 lg:hidden"
           onClick={() => setSidebarOpen(false)}
         />
       )}
@@ -45,8 +45,8 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, user }) => 
       {/* Sidebar */}
       <div
         ref={sidebarRef}
-        className={`fixed inset-y-0 left-0 z-30 w-58 transform bg-white transition-transform duration-300 ease-in-out md:translate-x-0 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
-          } md:static md:inset-0`}
+        className={`fixed inset-y-0 left-0 z-30 w-58 transform bg-white transition-transform duration-300 ease-in-out  lg:translate-x-0 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-[100%]'
+          } lg:static lg:inset-0`}
       >
         <Sidebar userRole={user.role} onCloseMobile={() => setSidebarOpen(false)} />
       </div>
@@ -54,7 +54,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, user }) => 
       {/* Main content */}
       <div className="flex flex-col flex-1 w-full overflow-y-auto">
         <DashboardHeader user={user} onToggleSidebar={() => setSidebarOpen(!isSidebarOpen)} />
-        <main className="p-4 md:p-6 bg-gray-100 flex-1">{children}</main>
+        <main className="p-4 md:p-6 bg-gray-100 flex-1 mt-16 lg:mt-15">{children}</main>
       </div>
     </div>
   );
