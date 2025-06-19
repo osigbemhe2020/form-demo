@@ -8,10 +8,6 @@ import DashboardLayout from '@/components/LayoutComponents/DashboardLayout/Dashb
 
 const geist = Geist({ subsets: ['latin'] });
 
-export const metadata = {
-  title: "Konnect-U",
-  description: "The Official Website for Konnect-U",
-};
 
 type UserRole = 'artisan' | 'client' | 'professional' | 'admin';
 
