@@ -77,7 +77,7 @@ const Sidebar: React.FC<SidebarProps> = ({ userRole, onCloseMobile }) => {
       <div className="flex flex-col gap-[50px]">
         <figure className="w-full flex items-center justify-center pt-6">
           <Image
-            src="/konnectu-logo.svg"
+            src="/WhatsApp-Image.svg"
             height={80}
             width={100}
             alt="KonnectU logo"
