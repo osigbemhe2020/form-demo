@@ -1,130 +1,108 @@
-const MainOne = () => {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-[7320px] gap-8 ">
-      <div>
-        <p className="font-semibold">Personal</p>
+const inputClasses =
+  'h-12 w-full border px-3 rounded-md border-gray-500 focus:outline-none';
 
-        {/* Row: First name + Surname */}
-        <div className="flex flex-row gap-4 mt-6 h-[75px]">
-          <div className="flex flex-col gap-2 w-full">
-            <label>First name</label>
-            <input
-              type="text"
-              name="fname"
-              placeholder="daniel"
-              className="h-12 w-full border px-2"
-            />
+const MainForm = () => {
+  return (
+    <div className="grid gap-8 lg:grid-cols-2">
+      {/* ───── Left column ───── */}
+      <div>
+        <p className="font-semibold mb-2">Personal</p>
+
+        <div className="flex flex-col gap-6">
+          {/* First + Last name (stack on mobile, row on md) */}
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex flex-col gap-2 flex-1">
+              <label>First name</label>
+              <input type="text" name="fname" placeholder="Daniel" className={inputClasses} />
+            </div>
+            <div className="flex flex-col gap-2 flex-1">
+              <label>Surname</label>
+              <input type="text" name="sname" placeholder="Okoro" className={inputClasses} />
+            </div>
           </div>
-          <div className="flex flex-col gap-2 w-full">
-            <label>Sur name</label>
-            <input
-              type="text"
-              name="sname"
-              placeholder="okoro"
-              className="h-12 w-full border px-2"
-            />
+
+          <div className="flex flex-col gap-2">
+            <label>Mobile number</label>
+            <input type="number" name="phone" className={inputClasses} />
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <label>Date of birth</label>
+            <input type="text" name="birth" className={inputClasses} />
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <label>Gender</label>
+            <input type="text" name="gender" className={inputClasses} />
           </div>
         </div>
-
-        {/* More inputs */}
-        
-          <div  className="flex flex-col gap-2 mt-6">
-            <label>Mobile Number</label>
-            <input
-              type="number"
-              name="phone-no"
-              className="h-12 w-full border px-2"
-            />
-          </div>
-
-          <div  className="flex flex-col gap-2 mt-6">
-            <label>Date of birth</label>
-            <input
-              type="text"
-              name="birth"
-              className="h-12 w-full border px-2"
-            />
-          </div>
-
-          <div  className="flex flex-col gap-2 mt-6">
-            <label>Gender</label>
-            <input
-              type="text"
-              name="gender"
-              className="h-12 w-full border px-2"
-            />
-          </div>
-        
       </div>
 
+      {/* ───── Right column ───── */}
       <div>
-        <p className="font-semibold"></p>
-        {/* Extra inputs for right column */}
-        <div className="flex flex-col gap-2 mt-6">
-          <label>Mobile Number</label>
-          <input type="number" name="phone-no-right" className="h-12 w-full border px-2" />
-        </div>
+        <p className="font-semibold mb-2">Contact</p>
 
-        <div className="flex flex-row gap-4 mt-6 h-[75px]">
-          <div className="flex flex-col gap-2 w-full">
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-2">
+            <label>E‑mail</label>
+            <input type="text" name="email" className={inputClasses} />
+          </div>
+
+          <div className="flex flex-col gap-2">
             <label>Phone no.</label>
-            <input type="text" name="fname-right" placeholder="daniel" className="h-12 w-full border px-2" />
+            <div className="flex flex-col md:flex-row gap-4">
+              <input type="text" name="phone-main" className={inputClasses} />
+              <input type="text" name="phone-alt" className={inputClasses} />
+            </div>
           </div>
-          <div className="flex flex-col gap-2 w-full">
-            <label>Sur name</label>
-            <input type="text" name="sname-right" placeholder="okoro" className="h-12 w-full border px-2" />
+
+          <div className="flex flex-col gap-2">
+            <label>Country</label>
+            <input type="text" name="country" className={inputClasses} />
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <label>Address</label>
+            <input type="text" name="address" className={inputClasses} />
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <label>Years of experience</label>
+            <input type="text" name="experience" className={inputClasses} />
           </div>
         </div>
-
-        <div  className="flex flex-col gap-2 mt-6">
-            <label>Mobile Number</label>
-            <input
-              type="number"
-              name="phone-no"
-              className="h-12 w-full border px-2"
-            />
-          </div>
-
-          <div  className="flex flex-col gap-2 mt-6">
-            <label>Date of birth</label>
-            <input
-              type="text"
-              name="birth"
-              className="h-12 w-full border px-2"
-            />
-          </div>
-
-          <div  className="flex flex-col gap-2 mt-6">
-            <label>Gender</label>
-            <input
-              type="text"
-              name="gender"
-              className="h-12 w-full border px-2"
-            />
-          </div>
       </div>
     </div>
   );
 };
 
+
 const Details = () => {
   return (
-    <div className="max-w-[732px] w-full h-auto px-4 overflow-hidden">
-      <div className="w-full mb-10 flex justify-between">
-        <p className="text-lg font-semibold">My Details</p>
-        <p className="text-sm text-gray-500">Last update on August</p>
+    <section className="max-w-screen-lg w-full mx-auto px-4 overflow-hidden">
+      {/* header */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
+        <p className="text-xl sm:text-2xl font-semibold text-[#006A05]">
+          My Details
+        </p>
+        <p className="text-sm text-gray-500 mt-2 sm:mt-0">
+          Last update on August
+        </p>
       </div>
 
-      <form className="w-full">
-        <MainOne />
+      {/* form */}
+      <form className="w-full space-y-8">
+        <MainForm />
+
         <input
           type="submit"
           value="Submit"
-          className="mt-8 h-12 w-full bg-blue-600 text-white font-medium rounded"
+          className="h-12 w-full bg-blue-600 text-white font-medium rounded"
         />
       </form>
-    </div>
+    </section>
   );
 };
 
 export default Details;
+

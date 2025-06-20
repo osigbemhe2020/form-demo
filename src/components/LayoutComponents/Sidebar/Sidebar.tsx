@@ -136,6 +136,7 @@ const Sidebar: React.FC<SidebarProps> = ({ userRole, onCloseMobile }) => {
                 size={24}
                 isActive={isSettings && isActive}
                 className="transition-opacity hover:opacity-80"
+
               />
               {label}
             </Link>
