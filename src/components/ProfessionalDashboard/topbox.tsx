@@ -7,7 +7,6 @@ const Topbox = () => {
       <div className="relative shrink-0">
         <img
           src="/images/profile-image.jpg"
-          alt="Daniel photo"
           className="w-24 h-24 sm:w-[150px] sm:h-[150px] border-2 border-[#006A05] rounded-full object-cover"
         />
         {/* Camera icon overlay */}
