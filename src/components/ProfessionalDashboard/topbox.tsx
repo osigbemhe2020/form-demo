@@ -10,7 +10,7 @@ const Topbox = () => {
           className="w-24 h-24 sm:w-[150px] sm:h-[150px] border-2 border-[#006A05] rounded-full object-cover"
         />
         {/* Camera icon overlay */}
-        <div className="absolute bottom-0 right-3 translate-x-1/4 translate-y-1/4 w-8 h-8 bg-[#006A05] rounded-full flex items-center justify-center">
+        <div className="absolute bottom-1 right-4 translate-x-1/4 translate-y-1/4 w-8 h-8 bg-[#006A05] rounded-full flex items-center justify-center">
           <FaCamera className="text-white text-sm" />
         </div>
       </div>
