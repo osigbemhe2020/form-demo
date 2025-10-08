@@ -6,6 +6,7 @@ const Topbox = () => {
       <div className="relative flex-shrink-0">
         <img
           src="/images/profile-image.jpg"
+          alt="placeholder"
           className="w-24 h-24 sm:w-[150px] sm:h-[150px] border-2 border-[#006A05] rounded-full object-cover"
         />
         {/* Camera icon overlay */}
