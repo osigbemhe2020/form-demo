@@ -2,17 +2,15 @@ import { FaCamera } from 'react-icons/fa';
 
 const Topbox = () => {
   return (
-    <div className="w-full max-w-screen-lg mx-auto bg-white px-4 sm:px-[60px] py-4 flex flex-col sm:flex-row items-center gap-4">
-      {/* Avatar block */}
-      <div className="relative shrink-0">
+    <div className="w-[102%] lg:h-[178px] bg-white px-4 sm:px-6 lg:px-[60px] py-3 flex flex-col lg:flex-row items-center lg:items-center gap-4">
+      <div className="relative flex-shrink-0">
         <img
           src="/images/profile-image.jpg"
-          alt="Daniel photo"
-          className="w-24 h-24 sm:w-[150px] sm:h-[150px] border-2 border-[#006A05] rounded-full object-cover"
+          alt="daniel-photo"
+          className="w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] border-[2px] border-[#006A05] rounded-full object-cover"
         />
-        {/* Camera icon overlay */}
-        <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 w-8 h-8 bg-[#006A05] rounded-full flex items-center justify-center">
-          <FaCamera className="text-white text-sm" />
+        <div className="h-[30px] w-[30px] bg-[#006A05] flex items-center justify-center absolute bottom-0  right-0 lg:right-4 rounded-full">
+          <FaCamera className="text-[16px] text-white" />
         </div>
       </div>
 

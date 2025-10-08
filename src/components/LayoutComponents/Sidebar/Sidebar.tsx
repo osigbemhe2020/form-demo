@@ -80,7 +80,7 @@ const Sidebar: React.FC<SidebarProps> = ({ userRole, onCloseMobile }) => {
             src="/WhatsApp-Image.svg"
             height={80}
             width={100}
-            alt="KonnectU logo"
+            alt="PADOLABS"
           />
         </figure>
 

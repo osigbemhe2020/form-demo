@@ -1,5 +1,4 @@
-const inputClasses =
-  'h-12 w-full border px-3 rounded-md border-gray-500 focus:outline-none';
+const inputClasses = 'h-12 w-full border px-3 rounded-md border-gray-500 focus:outline-none';
 
 const MainForm = () => {
   return (
