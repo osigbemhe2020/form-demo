@@ -5,7 +5,7 @@ const Topbox = () => {
     <div className="w-[102%] lg:h-[178px] bg-white px-4 sm:px-6 lg:px-[60px] py-3 flex flex-col lg:flex-row items-center lg:items-center gap-4">
       <div className="relative flex-shrink-0">
         <img
-          src="/images/profile-image.jpg"
+          src="/images/windows.jpeg"
           alt="placeholder"
           className="w-24 h-24 sm:w-[150px] sm:h-[150px] border-2 border-[#006A05] rounded-full object-cover"
         />
