@@ -6,11 +6,11 @@ const Topbox = () => {
       <div className="relative flex-shrink-0">
         <img
           src="/images/profile-image.jpg"
-          alt="daniel-photo"
-          className="w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] border-[2px] border-[#006A05] rounded-full object-cover"
+          className="w-24 h-24 sm:w-[150px] sm:h-[150px] border-2 border-[#006A05] rounded-full object-cover"
         />
-        <div className="h-[30px] w-[30px] bg-[#006A05] flex items-center justify-center absolute bottom-0  right-0 lg:right-4 rounded-full">
-          <FaCamera className="text-[16px] text-white" />
+        {/* Camera icon overlay */}
+        <div className="absolute bottom-1 right-4 translate-x-1/4 translate-y-1/4 w-8 h-8 bg-[#006A05] rounded-full flex items-center justify-center">
+          <FaCamera className="text-white text-sm" />
         </div>
       </div>
 
